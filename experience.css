@@ -103,6 +103,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .exp-tag {
   font-size: 0.7rem;
@@ -112,6 +114,7 @@
   color: var(--white);
   padding: 4px 12px;
   border-radius: 1px;
+  white-space: nowrap;
 }
 .exp-date {
   font-size: 0.8rem;
@@ -189,45 +192,80 @@
   color: var(--white);
 }
 
-/* RESPONSIVE */
+/* ─── RESPONSIVE: TABLET ─── */
 @media (max-width: 900px) {
   .exp-hero {
     flex-direction: column-reverse;
-    padding: 100px 28px 60px;
+    padding: 90px 22px 52px;
+    min-height: auto;
+    gap: 28px;
   }
   .exp-hero-photo {
     flex: none;
     width: 100%;
     height: 40vh;
   }
+  .exp-hero-sub { max-width: 100%; }
+
   .exp-timeline {
-    padding: 20px 28px 60px;
+    padding: 20px 22px 52px;
   }
   .exp-timeline::before { display: none; }
+
   .exp-entry {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 0 36px;
   }
-  .exp-entry.left .exp-card,
-  .exp-entry.right .exp-card {
-    grid-column: 1;
-    grid-row: 2;
-    padding: 0;
-    border-left: 3px solid var(--taupe);
-    padding-left: 16px;
-  }
+
+  /* photo always on top */
   .exp-entry.left .exp-photo,
   .exp-entry.right .exp-photo {
-    grid-column: 1;
-    grid-row: 1;
-    padding: 0;
+    order: 1;
+    width: 100%;
     height: 200px;
+    padding: 0;
   }
+
+  /* card always second */
+  .exp-entry.left .exp-card,
+  .exp-entry.right .exp-card {
+    order: 2;
+    width: 100%;
+    padding: 20px 20px 20px 24px;
+    border-left: 3px solid var(--taupe);
+  }
+
+  /* hide dot on mobile */
   .exp-line-dot { display: none; }
-  .exp-footer {
-    padding: 20px 28px 60px;
-    flex-direction: column;
-    align-items: flex-start;
+
+  /* separator line between entries */
+  .exp-entry + .exp-entry {
+    border-top: 1px solid rgba(155,135,120,0.15);
+    padding-top: 28px;
   }
+
+  .exp-footer {
+    padding: 16px 22px 56px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .exp-footer .btn-primary,
+  .exp-footer .btn-outline {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* ─── RESPONSIVE: MOBILE ─── */
+@media (max-width: 480px) {
+  .exp-hero { padding: 80px 18px 44px; }
+  .exp-hero-photo { height: 34vh; }
+  .exp-timeline { padding: 12px 18px 44px; }
+  .exp-entry.left .exp-photo,
+  .exp-entry.right .exp-photo { height: 170px; }
+  .exp-title { font-size: 1.25rem; }
+  .exp-footer { padding: 12px 18px 48px; }
 }

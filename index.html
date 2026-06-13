@@ -6,13 +6,16 @@
   <title>Zsarina Pink Davidon | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- TOP NAVBAR -->
   <nav class="topnav">
     <div class="topnav-logo">ZPD</div>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <div class="topnav-links">
       <a href="index.html" class="active">Home</a>
       <a href="experience.html">Experience</a>
@@ -369,25 +372,54 @@
 
   <!-- ─────────────── CONTACT ─────────────── -->
   <section id="contact" class="section contact">
+    <div class="contact-inner">
     <div class="contact-photo">
       <img src="assets/contact.jpg" alt="Let's Work Together" onerror="this.style.background='#c9b99a';this.removeAttribute('src')" />
     </div>
     <div class="contact-text">
-      <p class="eyebrow italic">Let's work</p>
-      <h2 class="display-md">TOGETHER</h2>
-      <div class="contact-info">
-        <div class="contact-detail">
-          <span>📞</span>
-          <a href="tel:+639569174363">0956-917-4363</a>
+
+      <!-- upper cream band -->
+      <div class="contact-upper">
+        <p class="eyebrow italic">Let's work</p>
+        <h2 class="display-md">TOGETHER</h2>
+      </div>
+
+      <!-- lower taupe band -->
+      <div class="contact-lower">
+        <div class="contact-lower-left">
+          <span class="contact-lower-label">Contact :</span>
+          <div class="contact-detail">
+            <img src="https://api.iconify.design/mdi/phone.svg?color=%23ffffff" alt="Phone" />
+            <a href="tel:+639569174363">0956-917-4363</a>
+          </div>
+          <div class="contact-detail">
+            <img src="https://api.iconify.design/mdi/email.svg?color=%23ffffff" alt="Email" />
+            <a href="mailto:zsarinapink@gmail.com">zsarinapink@gmail.com</a>
+          </div>
+          <div class="contact-socials">
+            <div class="contact-social-item">
+              <img src="https://api.iconify.design/simple-icons/linkedin.svg?color=%23ffffff" alt="LinkedIn" />
+              <a href="https://www.linkedin.com/in/zsarina-pink-davidon-064107324/" target="_blank" rel="noopener">linkedin.com/in/zsarina-pink-davidon-064107324/</a>
+            </div>
+            <div class="contact-social-item">
+              <img src="https://api.iconify.design/simple-icons/facebook.svg?color=%23ffffff" alt="Facebook" />
+              <a href="https://www.facebook.com/zsarinapink.davidon" target="_blank" rel="noopener">facebook.com/zsarinapink.davidon</a>
+            </div>
+            <div class="contact-social-item">
+              <img src="https://api.iconify.design/simple-icons/tiktok.svg?color=%23ffffff" alt="TikTok" />
+              <a href="https://www.tiktok.com/@zsarinapinkdavidon" target="_blank" rel="noopener">tiktok.com/@zsarinapinkdavido</a>
+            </div>
+          </div>
         </div>
-        <div class="contact-detail">
-          <span>✉️</span>
-          <a href="mailto:zsarinapink@gmail.com">zsarinapink@gmail.com</a>
-        </div>
-        <div class="contact-role">
-          <p>Administrative, Customer Service &amp; Business Support Specialist</p>
+
+        <div class="contact-divider"></div>
+
+        <div class="contact-lower-right">
+          <p class="contact-role-text">Administrative, Customer Service &amp; Business Support Specialist</p>
         </div>
       </div>
+
+    </div>
     </div>
   </section>
 
