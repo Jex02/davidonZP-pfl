@@ -3,106 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Experience – ZPD</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="experience.css"/>
+  <title>Experience | Zsarina Pink Davidon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="experience.css" />
 </head>
 <body>
 
-  <!-- NAV — uses exact classes from style.css -->
+  <!-- TOP NAVBAR -->
   <nav class="topnav">
     <div class="topnav-logo">ZPD</div>
-    <ul class="topnav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="experience.html" class="active">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
+    <div class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
   </nav>
 
-  <!-- EXPERIENCE PAGE -->
-  <div class="exp-page">
+  <!-- PAGE HERO -->
+  <section class="exp-hero">
+    <div class="exp-hero-text">
+      <p class="eyebrow italic">Work And</p>
+      <h1 class="display">EXPERIENCE</h1>
+      <p class="exp-hero-sub">I have a variety of experiences across administrative operations, customer service, financial management, and community leadership.</p>
+    </div>
+    <div class="exp-hero-photo">
+      <img src="assets/exp-hero.jpg" alt="Experience" onerror="this.style.background='#c9b99a';this.removeAttribute('src')" />
+    </div>
+  </section>
 
-    <!-- LEFT: sticky photo + label -->
-    <aside class="exp-left">
-      <div class="exp-photo-wrap">
-        <img src="assets/exp-main.jpg" alt="Zsarina"/>
-      </div>
-      <div class="exp-label">
-        <span class="exp-label-italic">Work And</span>
-        <span class="exp-label-big">EXPERIENCE</span>
-        <p class="exp-label-sub">I have a variety of experiences</p>
-      </div>
-    </aside>
+  <!-- TIMELINE -->
+  <section class="exp-timeline">
 
-    <!-- RIGHT: stacked experience cards -->
-    <main class="exp-right">
-
+    <!-- Entry 1 -->
+    <div class="exp-entry left">
       <div class="exp-card">
-        <span class="exp-tag">Leadership</span>
-        <h3 class="exp-title">Youth Leadership &amp; Ministry Experience</h3>
-        <div class="exp-divider"></div>
-        <div class="exp-meta">
-          <em>Communication, Leadership, Organizational Skills</em>
+        <div class="exp-card-header">
+          <span class="exp-tag">Leadership</span>
           <span class="exp-date">2016 – Present</span>
         </div>
+        <h3 class="exp-title">Youth Leadership &amp; Ministry Experience</h3>
+        <p class="exp-skills">Communication · Leadership · Organizational Skills</p>
         <p class="exp-desc">Media management, content editing, and documentation. Includes creating and editing visual materials, managing event coverage, and organizing records to support ministry activities and communication efforts.</p>
       </div>
+      <div class="exp-line-dot">
+        <div class="exp-dot"></div>
+      </div>
+      <div class="exp-photo">
+        <img src="assets/exp1.jpg" alt="Ministry" onerror="this.style.background='#d4c5b2';this.removeAttribute('src')" />
+      </div>
+    </div>
 
+    <!-- Entry 2 -->
+    <div class="exp-entry right">
+      <div class="exp-photo">
+        <img src="assets/exp2.jpg" alt="Accounting Internship" onerror="this.style.background='#c9b99a';this.removeAttribute('src')" />
+      </div>
+      <div class="exp-line-dot">
+        <div class="exp-dot"></div>
+      </div>
       <div class="exp-card">
-        <span class="exp-tag">Internship</span>
-        <h3 class="exp-title">Accounting Staff <span class="exp-title-note">(On the Job Training / Internship)</span></h3>
-        <div class="exp-divider"></div>
-        <div class="exp-meta">
-          <em>Attention to Detail, Bookkeeping</em>
+        <div class="exp-card-header">
+          <span class="exp-tag">Internship</span>
           <span class="exp-date">6 Months</span>
         </div>
+        <h3 class="exp-title">Accounting Staff</h3>
+        <p class="exp-skills">Attention to Detail · Bookkeeping</p>
         <p class="exp-desc">Hands-on experience in basic accounting tasks such as recording transactions, assisting in accounts receivable and payable, preparing financial documents, and maintaining accurate records.</p>
       </div>
+    </div>
 
+    <!-- Entry 3 -->
+    <div class="exp-entry left">
       <div class="exp-card">
-        <span class="exp-tag">Entrepreneurship</span>
-        <h3 class="exp-title">Co-founder &amp; Manager</h3>
-        <div class="exp-divider"></div>
-        <div class="exp-meta">
-          <em>Inventory Management, Operations, Supplier Coordination</em>
+        <div class="exp-card-header">
+          <span class="exp-tag">Entrepreneurship</span>
           <span class="exp-date">2022 – 2023</span>
         </div>
+        <h3 class="exp-title">Co-founder &amp; Manager</h3>
+        <p class="exp-skills">Inventory Management · Operations · Supplier Coordination</p>
         <p class="exp-desc">Co-founded and managed a local food and beverage business, overseeing daily operations, inventory management, product quality, and supplier coordination.</p>
       </div>
+      <div class="exp-line-dot">
+        <div class="exp-dot"></div>
+      </div>
+      <div class="exp-photo">
+        <img src="assets/exp3.jpg" alt="Business" onerror="this.style.background='#b5a694';this.removeAttribute('src')" />
+      </div>
+    </div>
 
+    <!-- Entry 4 -->
+    <div class="exp-entry right">
+      <div class="exp-photo">
+        <img src="assets/exp4.jpg" alt="Travel Support" onerror="this.style.background='#c9b99a';this.removeAttribute('src')" />
+      </div>
+      <div class="exp-line-dot">
+        <div class="exp-dot"></div>
+      </div>
       <div class="exp-card">
-        <span class="exp-tag">Customer Service</span>
-        <h3 class="exp-title">Travel Support Specialist</h3>
-        <div class="exp-divider"></div>
-        <div class="exp-meta">
-          <em>Customer Service Representative – Travel Account</em>
+        <div class="exp-card-header">
+          <span class="exp-tag">Customer Service</span>
           <span class="exp-date">2023 – 2024</span>
         </div>
+        <h3 class="exp-title">Travel Support Specialist</h3>
+        <p class="exp-skills">Customer Service Representative – Travel Account</p>
         <p class="exp-desc">Provided customer support for travel-related inquiries, reservations, itinerary changes, and account concerns.</p>
       </div>
+    </div>
 
+    <!-- Entry 5 -->
+    <div class="exp-entry left">
       <div class="exp-card">
-        <span class="exp-tag">Finance</span>
-        <h3 class="exp-title">Accounting (Accounts Receivable)</h3>
-        <div class="exp-divider"></div>
-        <div class="exp-meta">
-          <em>Accounts Payable and Receivable, Financial Reports</em>
+        <div class="exp-card-header">
+          <span class="exp-tag">Finance</span>
           <span class="exp-date">2024 – 2026</span>
         </div>
+        <h3 class="exp-title">Accounting — Accounts Receivable</h3>
+        <p class="exp-skills">Accounts Payable &amp; Receivable · Financial Reports</p>
         <p class="exp-desc">Managed customer accounts, monitored payments, maintained accurate financial records, and assisted with collections and account reconciliations.</p>
       </div>
-
-      <div class="exp-nav-btns">
-        <a href="index.html" class="btn-primary" style="background:transparent;border:1.5px solid var(--taupe);color:var(--taupe);">← Back to Home</a>
-        <a href="projects.html" class="btn-primary">View Projects →</a>
+      <div class="exp-line-dot">
+        <div class="exp-dot"></div>
       </div>
+      <div class="exp-photo">
+        <img src="assets/exp5.jpg" alt="Accounting" onerror="this.style.background='#d4c5b2';this.removeAttribute('src')" />
+      </div>
+    </div>
 
-    </main>
-  </div>
+  </section>
 
+  <!-- BACK TO HOME -->
+  <section class="exp-footer">
+    <a href="index.html" class="btn-primary">← Back to Home</a>
+    <a href="projects.html" class="btn-outline">View Projects →</a>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>

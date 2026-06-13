@@ -1,0 +1,223 @@
+/* ─── PROJECTS PAGE ─── */
+
+.proj-hero {
+  padding: 120px 80px 40px;
+  max-width: 800px;
+}
+.proj-hero-sub {
+  font-size: 1.05rem;
+  margin-top: 8px;
+}
+
+/* GRID */
+.proj-grid {
+  padding: 20px 80px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+.proj-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.proj-card:hover { transform: translateY(-6px); }
+
+.proj-thumb {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.proj-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 150px;
+  transition: transform 0.35s;
+}
+.proj-card:hover .proj-thumb img { transform: scale(1.08); }
+
+.proj-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(92,76,62,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.proj-card:hover .proj-overlay { opacity: 1; }
+.proj-overlay span {
+  color: var(--white);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  padding: 8px 20px;
+}
+
+.proj-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+.proj-tags {
+  font-size: 0.78rem;
+  color: var(--taupe-dk);
+  font-style: italic;
+  margin: 0;
+}
+
+/* FOOTER */
+.proj-footer {
+  padding: 20px 80px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ─────────────── MODAL ─────────────── */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(58, 48, 40, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.modal-backdrop.active {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-box {
+  background: var(--cream);
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-img {
+  width: 100%;
+  background: var(--beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.modal-img img {
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 6px 24px rgba(58,48,40,0.15);
+}
+
+.modal-content {
+  padding: 36px 40px 44px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-content .exp-tag {
+  align-self: flex-start;
+  margin-bottom: 14px;
+}
+.modal-content h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+.modal-content p {
+  font-size: 0.98rem;
+  margin-bottom: 20px;
+}
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.modal-tags li {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--beige);
+  color: var(--taupe-dk);
+  padding: 6px 14px;
+  border: 1px solid rgba(155,135,120,0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.85);
+  color: var(--brown);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.modal-close:hover { background: var(--white); }
+
+/* lock scroll when modal open */
+body.modal-open { overflow: hidden; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .proj-hero { padding: 100px 28px 30px; }
+  .proj-grid {
+    padding: 10px 28px 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .proj-footer {
+    padding: 10px 28px 60px;
+    flex-direction: column-reverse;
+    gap: 16px;
+    align-items: stretch;
+    text-align: center;
+  }
+  .modal-box {
+    max-height: 92vh;
+  }
+  .modal-img { padding: 16px; }
+  .modal-img img { max-height: 220px; }
+  .modal-content { padding: 28px 24px; }
+}
+@media (max-width: 600px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}

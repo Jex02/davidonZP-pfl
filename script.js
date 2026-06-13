@@ -1,6 +1,8 @@
 // ─── SCROLLSPY ───
 const sections = document.querySelectorAll('.section');
 const dots = document.querySelectorAll('.spy-dot');
+const homeNavLink = document.querySelector('.topnav-links a[href="index.html"]');
+const contactNavLink = document.querySelector('.topnav-links a[href="#contact"], .topnav-links a[href="index.html#contact"]');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -12,6 +14,17 @@ const observer = new IntersectionObserver((entries) => {
           dot.classList.add('active');
         }
       });
+
+      // toggle topnav Home <-> Contact highlight on index.html
+      if (homeNavLink && contactNavLink) {
+        if (id === 'contact') {
+          homeNavLink.classList.remove('active');
+          contactNavLink.classList.add('active');
+        } else {
+          contactNavLink.classList.remove('active');
+          homeNavLink.classList.add('active');
+        }
+      }
     }
   });
 }, {
@@ -26,5 +39,47 @@ topLinks.forEach(link => {
   if (link.getAttribute('href') === window.location.pathname.split('/').pop() ||
       (link.getAttribute('href') === 'index.html' && window.location.pathname.endsWith('index.html'))) {
     link.classList.add('active');
+  }
+});
+
+// ─── PROJECT MODALS ───
+const projectCards = document.querySelectorAll('.proj-card');
+const modalBackdrops = document.querySelectorAll('.modal-backdrop');
+
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add('active');
+  document.body.classList.add('modal-open');
+}
+
+function closeModal(modal) {
+  modal.classList.remove('active');
+  document.body.classList.remove('modal-open');
+}
+
+projectCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const modalId = card.getAttribute('data-modal');
+    openModal(modalId);
+  });
+});
+
+modalBackdrops.forEach(modal => {
+  // close on backdrop click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal(modal);
+  });
+  // close on X button click
+  const closeBtn = modal.querySelector('[data-close]');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => closeModal(modal));
+  }
+});
+
+// close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-backdrop.active').forEach(modal => closeModal(modal));
   }
 });

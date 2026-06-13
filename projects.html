@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Zsarina Pink Davidon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="projects.css?v=4" />
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <nav class="topnav">
+    <div class="topnav-logo">ZPD</div>
+    <div class="topnav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="proj-hero">
+    <p class="eyebrow italic">My Latest</p>
+    <h1 class="display-md">DESIGN PROJECTS</h1>
+    <p class="proj-hero-sub">A selection of design, content, and reporting work spanning social media, virtual assistance, financial reporting, and community management.</p>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="proj-grid">
+
+    <!-- Project 1 -->
+    <div class="proj-card" data-modal="modal-1">
+      <div class="proj-thumb">
+        <img src="assets/proj1.jpg" alt="Social Media Campaign" onerror="this.style.background='#3a6ea5';this.removeAttribute('src')" />
+        <div class="proj-overlay"><span>View Details</span></div>
+      </div>
+      <h3>Social Media Campaign</h3>
+      <p class="proj-tags">Graphic Design · Content Creation · Event Marketing</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="proj-card" data-modal="modal-2">
+      <div class="proj-thumb">
+        <img src="assets/proj2.jpg" alt="Virtual Assistant Service Brochure" onerror="this.style.background='#5c4534';this.removeAttribute('src')" />
+        <div class="proj-overlay"><span>View Details</span></div>
+      </div>
+      <h3>Virtual Assistant Service Brochure</h3>
+      <p class="proj-tags">Canva · Branding · Business Support</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="proj-card" data-modal="modal-3">
+      <div class="proj-thumb">
+        <img src="assets/proj3.jpg" alt="Monthly Sales & Collections Report" onerror="this.style.background='#e8e0d5';this.removeAttribute('src')" />
+        <div class="proj-overlay"><span>View Details</span></div>
+      </div>
+      <h3>Monthly Sales &amp; Collections Report</h3>
+      <p class="proj-tags">Reporting · Data Visualization · Financial Analysis</p>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="proj-card" data-modal="modal-4">
+      <div class="proj-thumb">
+        <img src="assets/proj4.jpg" alt="Church Social Media Head" onerror="this.style.background='#2f4f3f';this.removeAttribute('src')" />
+        <div class="proj-overlay"><span>View Details</span></div>
+      </div>
+      <h3>Church Social Media Head</h3>
+      <p class="proj-tags">Content Creation · Community Engagement</p>
+    </div>
+
+  </section>
+
+  <!-- BACK / NEXT -->
+  <section class="proj-footer">
+    <a href="experience.html" class="btn-outline">← Experience</a>
+    <a href="index.html#contact" class="btn-primary">Contact Me →</a>
+  </section>
+
+  <!-- ─────────────── MODALS ─────────────── -->
+
+  <!-- Modal 1 -->
+  <div class="modal-backdrop" id="modal-1">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-img">
+        <img src="assets/proj1.jpg" alt="Social Media Campaign" onerror="this.style.background='#3a6ea5';this.removeAttribute('src')" />
+      </div>
+      <div class="modal-content">
+        <span class="exp-tag">Design</span>
+        <h2>Social Media Campaign</h2>
+        <p>A full social media campaign covering graphic design, content creation, and event marketing — built to boost community engagement and brand visibility across platforms.</p>
+        <ul class="modal-tags">
+          <li>Graphic Design</li>
+          <li>Content Creation</li>
+          <li>Event Marketing</li>
+          <li>Community Engagement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal-backdrop" id="modal-2">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-img">
+        <img src="assets/proj2.jpg" alt="Virtual Assistant Service Brochure" onerror="this.style.background='#5c4534';this.removeAttribute('src')" />
+      </div>
+      <div class="modal-content">
+        <span class="exp-tag">Branding</span>
+        <h2>Virtual Assistant Service Brochure</h2>
+        <p>A branded service brochure designed in Canva, showcasing virtual assistant offerings including email management, project oversight, and business support services.</p>
+        <ul class="modal-tags">
+          <li>Canva</li>
+          <li>Branding</li>
+          <li>Business Support</li>
+          <li>Marketing Materials</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal-backdrop" id="modal-3">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-img">
+        <img src="assets/proj3.jpg" alt="Monthly Sales & Collections Report" onerror="this.style.background='#e8e0d5';this.removeAttribute('src')" />
+      </div>
+      <div class="modal-content">
+        <span class="exp-tag">Finance</span>
+        <h2>Monthly Sales &amp; Collections Report</h2>
+        <p>A detailed monthly report tracking sales representatives' accounts receivable exposure, presented with clear data visualization to support financial decision-making.</p>
+        <ul class="modal-tags">
+          <li>Reporting</li>
+          <li>Data Visualization</li>
+          <li>Accounts Receivable</li>
+          <li>Financial Analysis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="modal-backdrop" id="modal-4">
+    <div class="modal-box">
+      <button class="modal-close" data-close>&times;</button>
+      <div class="modal-img">
+        <img src="assets/proj4.jpg" alt="Church Social Media Head" onerror="this.style.background='#2f4f3f';this.removeAttribute('src')" />
+      </div>
+      <div class="modal-content">
+        <span class="exp-tag">Community</span>
+        <h2>Church Social Media Head</h2>
+        <p>Led the social media presence for a parish youth ministry page, managing content creation, event marketing, and community engagement to grow and connect with followers.</p>
+        <ul class="modal-tags">
+          <li>Graphic Design</li>
+          <li>Content Creation</li>
+          <li>Event Marketing</li>
+          <li>Community Engagement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
