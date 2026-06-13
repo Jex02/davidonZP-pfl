@@ -611,13 +611,28 @@ p { color: var(--text-lt); margin-bottom: 14px; font-size: 1.1rem; }
 /* upper cream band — heading */
 .contact-upper {
   flex: 1;
-  padding: 60px 52px 40px;
+  padding: 52px 52px 44px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-left: 3px solid rgba(155,135,120,0.25);
   position: relative;
   background: var(--cream);
+}
+.contact-upper .display-md {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  margin-bottom: 20px;
+}
+.contact-upper-sub {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin: 0;
+  max-width: 340px;
+  line-height: 1.8;
+  border-top: 1px solid rgba(155,135,120,0.3);
+  padding-top: 20px;
 }
 
 /* lower taupe band — contact info + socials */
