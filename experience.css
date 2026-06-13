@@ -150,6 +150,20 @@
   object-fit: cover;
   min-height: 200px;
 }
+.exp-photo-fit {
+  height: auto;
+  background: var(--beige);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exp-photo-fit img {
+  height: auto;
+  max-height: 260px;
+  width: 100%;
+  object-fit: contain;
+  min-height: 0;
+}
 
 /* FOOTER BUTTONS */
 .exp-footer {
